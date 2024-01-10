@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import render_template
 from database import db
 from flask_migrate import Migrate
 from usuarios import bp_usuarios

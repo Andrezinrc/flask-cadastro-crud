@@ -9,7 +9,9 @@
    <ul>
       {% for u in usuarios %}
         <li>
-          {{ u.nome }} - <a href="">Editar</a>
+          {{ u.nome }} - 
+             <a href="/usuarios/update/{{u.id}}">Editar</a>
+             <a href="/usuarios/delete/{{u.id}}">Excluir</a>
         </li>
       {% endfor %}
    </ul>
