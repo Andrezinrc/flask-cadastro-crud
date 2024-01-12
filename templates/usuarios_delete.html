@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"></link>
-    <title></title>
+    <title>pagina deletar</title>
 </head>
 <body>
-  <h2>Voce tem certeza que deseja excluir?</h2>
-  <form method="post" action="/usuarios/delete/{{u.id}}">
+  <form class="formulario-cadastro" method="post" action="/usuarios/delete/{{u.id}}">
+    <h2 class="titulo">Voce tem certeza que deseja excluir?</h2>
     <input type="submit" value="Sim">
+    <a class="botao-cancelar" href="/usuarios/recovery">Cancelar</a>
   </form>
-  <br>
-  <a href="/usuarios/recovery">Cancelar</a>
 </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, flash
 from models import Usuario
 from database import db
 
@@ -18,7 +18,8 @@ def create():
         u = Usuario(nome, email, senha)
         db.session.add(u)
         db.session.commit()
-        return "Dados cadastrados com sucesso"
+        flash("Dados cadastrados com sucesso", "success")
+        return redirect('/usuarios/recovery')
 
 @bp_usuarios.route("/recovery")
 def recovery():
@@ -49,4 +50,4 @@ def delete(id):
     if request.method == "POST":
         db.session.delete(u)
         db.session.commit()
-        return "Dados excluÃ­dos com sucesso"
+        return redirect('/usuarios/recovery')

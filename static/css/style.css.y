@@ -84,17 +84,14 @@ body{
 }
 input{
   width: 250px;
-  height: 45px;
+  height: 40px;
   margin-bottom: 10px;
   padding-left: 10px;
-  border: 0;
-  background-color: lightgrey;
 }
 .botao-cancelar{
   text-decoration: none;
-  padding: 12px 93px;
-  background-color: lightgrey;
-  color: black;
+  pedding: 5px 20px;
+  background-color: lightgray;
 }
 @media screen and (max-width: 768px){
   .formulario-cadastro{

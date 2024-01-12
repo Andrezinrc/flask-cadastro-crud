@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"></link>
-    <title>Cadastro de Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <title>Cadastro de UsuÃ¡rio</title>
 </head>
-   <main class="conteudo">
-     <form class="formulario-cadastro" method="post" action="/>
-        <input type="text" id="nome" name="nome" value="{{u.nome}}>
-        <br>
-        <input type="email" id="email" name="email" value="{{u.email}}>
-        <br>
-        <input type="password" id="senha" name="senha" placeholder="crie sua senha">
-        <br>
-        <input type="password" id="csenha" name="csenha" placeholder="confirme sua senha">
-        <br>
-        <input type="submit" value="Cadastrar">
-    </form>
-   </main>
+<body>
+    <main class="">
+         <form class="formulario-cadastro-editar" method="post" action="{{ url_for('usuarios.update', id=u.id) }}">
+            <h2 class="titulo">Editar informação</h2>
+            <input type="text" id="nome" name="nome" value="{{u.nome}}">
+            <br>
+            <input type="email" id="email" name="email" value="{{u.email}}">
+            <br>
+            <input type="password" id="senha" name="senha" placeholder="crie sua senha">
+            <br>
+            <input type="password" id="csenha" name="csenha" placeholder="confirme sua senha">
+            <br>
+            <input type="submit" value="Confirmar">
+        </form>
+    </main>
 </body>
 </html>
